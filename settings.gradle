@@ -1,0 +1,3 @@
+include ':gpuimagefilter'
+include ':app'
+rootProject.name = "ImageFilter"
