@@ -6,8 +6,6 @@ import android.os.Bundle
 import android.provider.MediaStore
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import com.bumptech.glide.Glide
-import com.mjcwrks.gpuimagefilter.FilterActivity
 
 class MainActivity : AppCompatActivity() {
     private val gallery_ReqCode: Int=100
@@ -17,6 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         imageView = findViewById(R.id.imageView)
+
 
         GalleryPictureIntent()
 
@@ -43,11 +42,11 @@ class MainActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (resultCode == RESULT_OK && requestCode == gallery_ReqCode) {
+        /*if (resultCode == RESULT_OK && requestCode == gallery_ReqCode) {
             startActivity(Intent(this,FilterActivity::class.java).setData(data!!.data))
         }else if(resultCode ==3){
             Glide.with(this).load(data!!.data).into(imageView)
-        }
+        }*/
     }
 
 }
