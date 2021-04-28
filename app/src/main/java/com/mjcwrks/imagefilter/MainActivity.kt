@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         imageView = findViewById(R.id.imageView)
 
 
+
         GalleryPictureIntent()
 
     }
